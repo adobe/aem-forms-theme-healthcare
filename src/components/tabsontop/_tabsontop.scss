@@ -1,0 +1,24 @@
+.cmp-tabs {
+  position: relative;
+  margin: $space-l 0;
+
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+  &__label {
+    @include panel-label;
+  }
+  @include description;
+
+  &__tablist {
+    @include tab-list;
+  }
+
+  &__tab {
+    @include tab;
+  }
+
+  &__tabpanel {
+    @include tab-container;
+  }
+}

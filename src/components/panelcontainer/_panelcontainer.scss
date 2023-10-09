@@ -1,0 +1,48 @@
+.cmp-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 32px;
+
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+  &__label {
+    @include panel-label;
+  }
+  @include description;
+  &__questionmark{
+    top: $space-s;
+    right: $space-s
+  }
+}
+
+// change panel color for repeater
+div[data-cmp-is="adaptiveFormPanel"] {
+  @include surface;
+  padding: $space-l;
+
+  @media (max-width:640px) {
+    padding: $space-m $space-s;
+  }
+
+  & & {
+    @include surface;
+    padding: $space-l;
+    background: $secondary-background-color;
+
+    @media (max-width:640px) {
+      padding: $space-m $space-s;
+    }
+  }
+
+  & & & {
+    @include surface;
+    padding: $space-l;
+    background: $secondary-background-color;
+
+    @media (max-width:640px) {
+      padding: $space-m $space-s;
+    }
+  }
+}

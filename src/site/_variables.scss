@@ -1,0 +1,84 @@
+//== Font
+
+// ====== colors======
+$light-primary: #D3E8E3;
+$primary: #248D74;
+$dark-primary: #186A57;
+$secondary: #000000E5;
+$background-color: linear-gradient(0deg, rgba(54, 152, 129, 0.22), rgba(54, 152, 129, 0.22)),linear-gradient(0deg, #FFFFFF, #FFFFFF);
+$disabled-color: #0000000A;
+
+$header-background: linear-gradient(156.52deg, rgba(255, 255, 255, 0.4) 2.12%, rgba(255, 255, 255, 0.0001) 39%, rgba(255, 255, 255, 0.0001) 54.33%, rgba(255, 255, 255, 0.1) 93.02%);
+$header-background-color: rgba(255, 255, 255, 0.4);
+$header-background-blend-mode: luminosity;
+
+$secondary-background-color: linear-gradient(156.52deg, rgba(255, 255, 255, 0.4) 2.12%, rgba(255, 255, 255, 0.0001) 39%, rgba(255, 255, 255, 0.0001) 54.33%, rgba(255, 255, 255, 0.1) 93.02%),
+linear-gradient(0deg, rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.52));
+
+$widget-border-radius: 12px;
+$widget-default-background-color: rgba(0, 0, 0, 0.04);
+$widget-hover-background-color: rgba(0, 0, 0, 0.1);
+$widget-focus-background-color: transparent;
+$widget-focus-text-color: rgba(36, 141, 116, 1);
+//$widget-readonly-background-color: rgba(0, 0, 0, 0.2);
+$widget-box-shadow: 1px 1.5px 4px 0px #0000001A inset,
+            1px 1.5px 4px 0px #00000014 inset,
+            0px -0.5px 1px 0px #FFFFFF40 inset,
+            0px -0.5px 1px 0px #FFFFFF4D inset;
+
+$button-active-color: #00000094;
+
+//======= states =======
+
+
+
+
+//======= error =======
+$error: #BE4A5F;
+$light-error: rgba(235,60,54,0.05);
+$white: #fff;
+$black: #000;
+$gray: #000000B2;
+$light-gray: #969696;
+$very-light-gray: #ddd;
+$translucent-gray: rgba(0, 0, 0, 0.1);
+
+
+// ====== font size======
+$font-xl: 2.625rem;
+$font-l: 1.25rem;
+$font-m: 1rem;
+$font-s: .75rem;
+$button-font-size: 17px;
+$select-font-size: 15px;
+
+// ====== font weight======
+$font-weight-bold: 700;
+$font-weight-medium: 590;
+$font-weight-semi-bold: 600;
+$font-weight-regular: 500;
+$font-weight-light: 400;
+
+// ====== space ======
+$space-xs: 6px;
+$space-s: 12px;
+$space-m: 24px;
+$space-l: 48px;
+$field-radius: 12px;
+$button-radius: 4px;
+$tap-height: 48px;
+$size-m: 44px;
+
+//== Grid
+$max_col: 12;
+
+$error_icon: url(./resources/images/error.svg);
+
+// ========borders=============
+$focus-outline: 2px $primary solid;
+$error-outline: 2px $error solid;
+//the color value here is equivalent to $background-color
+$border-light: 1px #d5e9e4 solid;
+$border-error: 1px $error solid;
+$border-error-focus: 2px $error solid;
+$border-dark: 1px $light-gray solid;

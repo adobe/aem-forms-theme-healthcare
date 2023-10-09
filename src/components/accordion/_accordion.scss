@@ -1,0 +1,92 @@
+.cmp-accordion {
+  position: relative;
+  margin: $space-l 0;
+  @include description;
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+  &__label {
+    @include panel-label;
+  }
+  &__item {
+    margin: 5px;
+  }
+
+
+  &__button {
+    opacity: 1;
+    height: 32px;
+    font-size: $font-m;
+    background: #0000000A;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    padding: 0 $space-s;
+    color: $gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-family: SourceSansSemiBold, SourceSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    &:hover {
+      color: $black;
+      border-color: $black;
+    }
+
+    &--expanded {
+      color: $black;
+      // border-bottom: $border-dark;
+      margin-bottom: $space-xs;
+      background: $white;
+      
+
+      &:hover {
+        color: $black;
+
+      }
+    }
+  }
+
+  &__button &__icon {
+    display: inline-block;
+    background: url(./resources/images/dropdown.svg) center center / cover no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cmp-accordion__button.cmp-accordion__button--expanded &__icon {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+  }
+
+  &__button:hover>.cmp-accordion__title:before {
+    border-color: $black;
+  }
+
+  &__title {
+    font-weight: $font-weight-medium;
+    display: flex;
+    column-gap: $space-s;
+    justify-content: space-between;
+    align-items: center;
+    // text-transform: uppercase;
+    @include tab-list;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+
+  }
+
+  &__header{
+    display: flex;
+  }
+  &__button{
+    flex: 1;
+  }
+  &__repeatable-buttons {
+    @include repeatable-buttons;
+  }
+  &__panel {
+    @include tab-container;
+  }
+}

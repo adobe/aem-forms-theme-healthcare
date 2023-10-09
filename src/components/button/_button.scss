@@ -1,0 +1,63 @@
+.cmp-adaptiveform-button {
+  position: relative;
+  border: none;
+  margin: $space-s 0;
+
+  & button {
+    border-radius: 500px;
+    //Fix name of color variable
+    background-color: $disabled-color;
+  
+    &:hover {
+      //background-color: $dark-primary;
+      //define a variable for this color
+      background: #0000001F;
+
+    }
+    &:active {
+      background-color: #00000094;
+    }
+    &[disabled] {
+      background: #0000001F;
+      opacity: 60%;
+    }
+  }
+
+  &__widget {
+    @include primary-button;
+  }
+  &__widget[data-cmp-enabled]:not([data-cmp-enabled=true]) {
+    background: $gray;
+    color: $very-light-gray;
+  }
+  @include description;
+  &__questionmark{
+    @media (max-width: 640px) {
+      top: -5px;
+    }
+  }
+}
+
+.submit {
+  position: sticky;
+  bottom: 0;
+  z-index: 12;
+  width: calc(100% + 40px);
+  & button {
+    margin-top: 0;
+    background-color: $primary;
+    color: $white;
+
+    &:not([disabled]):hover {
+      background-color: $dark-primary;
+    }
+    //duplicate entry from default button section above
+    &:not([disabled]):active {
+      background-color: #00000094;
+    }
+    &[disabled] {
+      background: $primary;
+      opacity: 60%;
+    }
+  }
+}

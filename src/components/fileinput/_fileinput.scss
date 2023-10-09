@@ -1,0 +1,72 @@
+.cmp-adaptiveform-fileinput {
+  @include input;
+
+  &[data-cmp-enabled=false] {
+    opacity: 60%;
+    
+    & .cmp-adaptiveform-fileinput__widgetlabel{
+      cursor: default;
+      background-color: #0000001f;
+      
+      &:active {
+        color: $black;
+        opacity: 90%;
+      }  
+
+    }
+  }
+
+  &__widgetlabel {
+    @include secondary-button;
+    position: static;
+    pointer-events: all;
+    margin: $space-xs 0;
+    //Added for look like button
+    border-radius: 500px;
+    //Fix name of color variable
+    background-color: $disabled-color;
+    font-weight: $font-weight-semi-bold;
+  
+    &:hover {
+      //background-color: $dark-primary;
+      //define a variable for this color
+      background: #0000001F;
+
+    }
+    &:active {
+      background-color: #00000094;
+    }    
+
+  }
+
+  &__filelist {
+    padding-inline-start: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__fileitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $tap-height;
+    padding: 0 $space-s;
+    border-bottom: $border-light;
+  }
+
+  &__filename {
+    position: static;
+  }
+
+  &__filedelete {
+    cursor: pointer;
+  }
+
+  input[type="file"] {
+    column-gap: $space-l;
+  }
+
+  br {
+    display: none;
+  }
+}

@@ -1,0 +1,102 @@
+.cmp-adaptiveform-checkboxgroup {
+  @include container;
+
+  &__label {
+    @include label;
+    opacity: 1;
+  }
+
+  &__widget {
+    @include list-container;
+    background: #0000000A;
+    padding-inline: $space-xs;
+  }
+
+  @include description;
+
+  &__errormessage {
+    @include error-message
+  }
+
+  //To Refactor taking both radiobutton and checkbox disabled state at common place
+  &[data-cmp-enabled=false] label {
+    color: #00000066;
+
+    &:hover {
+      background: none;
+      cursor: default;
+    }
+
+  }
+
+  &-item {
+    @include list-item;
+    color: $gray;
+    padding-inline: 0px;
+  }
+
+  &-item &__label,&__option-label {
+    @include checkbox-label;
+      color: $black;      
+      pointer-events: all;
+      cursor: pointer;
+      padding: 5px 0px;
+      width: 100%;
+  }
+
+  &__option__widget {
+    @include widget;
+    height: 0px;
+    width: 0px;
+    display: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    &:checked {
+      background-color: $light-primary;
+    }
+
+    &+span {
+      opacity: .7;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      column-gap: $space-s;
+      padding: 5px 10px;
+      border-radius: 10px;
+      background-color: #0000000A;
+      &:hover {
+        background-color: $translucent-gray;
+        cursor: pointer;
+      }
+    }
+
+    &[checked]+span {
+      background-color: $white;
+      opacity: 1;
+      cursor: pointer;
+      &:hover {
+        background-color: $white;
+      }
+      color: $primary;
+      &::before {
+        content: '';
+        background: url(./resources/images/check.svg);
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &:focus:not([disabled]) {
+      outline: none;
+    }
+  }
+
+  &__label:hover &__option__widget {
+    background-color: white;
+  }
+}

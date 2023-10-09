@@ -1,0 +1,59 @@
+.cmp-verticaltabs{
+    font-size: $font-m;
+    margin: $space-xs 0;
+    position: relative;
+    cursor: pointer;
+  
+  &__tabs-container{
+    display: flex;
+    @media(max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__tabpanel{
+    flex: 1;
+    padding: 16px $space-m;
+  }
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+  &__label {
+    @include panel-label;
+  }
+  &__tablist{
+    @media(min-width: 768px) {
+      @include vertical-tab-list;
+    }
+    @media(max-width: 768px) {
+      @include tab-list;
+    }
+  }
+  &__tab{
+    @media(min-width: 768px) {
+      @include vertical-tab;
+    }
+    @media(max-width: 768px) {
+      @include tab;
+    }
+  }
+  @include description;
+
+  @media (max-width: 640px) {
+    &__tabs-container{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    &__tabpanel{
+      padding: 5px 0;
+    }
+    &__tablist{
+      width: 100%;
+    }
+
+    &__tab{
+      width: auto;
+    }
+  }
+}

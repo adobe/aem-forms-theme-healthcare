@@ -1,0 +1,89 @@
+.cmp-adaptiveform-radiobutton {
+  @include container;
+
+  &__label {
+    @include label;
+
+  }
+
+  &__widget {
+    @include list-container;
+
+    &.VERTICAL label {
+      text-align: left;
+    }
+
+    &.HORIZONTAL {
+      padding-inline: $space-xs;
+    }
+
+    &.VERTICAL {
+      padding: $space-xs;
+    }
+
+  }
+
+  @include description;
+
+  &__errormessage {
+    @include error-message
+  }
+
+  &[data-cmp-enabled=false] label {
+    color: #00000066;
+
+    &:hover {
+      background: none;
+      cursor: default;
+    }
+
+  }
+  
+
+  &__option {
+    @include list-item;
+
+    &__label,&-label {
+      width: 100%;
+      color: $black;
+      display: flex;
+      pointer-events: all;
+      margin: 0;
+      cursor: pointer;
+      font-size: $select-font-size;
+      font-weight: $font-weight-medium;      
+    }
+
+    &__widget {
+      display: none;
+      height: 0;
+      width: 0;
+    }
+
+    &__widget:checked{
+      background-color: #58ba83;
+    }
+
+    &__widget+span {
+      width: 100%;
+      padding: 5px 10px;
+      border-radius: 10px;
+      opacity: 78%;
+      &:hover {
+        background-color: $translucent-gray;
+        cursor: pointer;
+      }
+    }
+
+    &__widget[checked]+span {
+      opacity: 1;
+      color: $primary;
+      background-color: $white;
+      cursor: pointer;
+      &:hover {
+        background-color: $white;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,15 @@
+@mixin fontface($name, $file, $weight: normal, $style: normal) {
+    @font-face {
+      font-weight: $weight;
+      font-family: '#{$name}';
+      font-style: $style;
+      src: url('resources/fonts/#{$file}.ttf') format('truetype');
+    }
+  }
+  
+  @include fontface('SourceSerif', 'SourceSerifPro/SourceSerifPro-Regular', normal);
+  @include fontface('SourceSerifBold', 'SourceSerifPro/SourceSerifPro-Bold', bold);
+  @include fontface('SourceSans', 'SourceSansPro/SourceSansPro-Regular', normal);
+  @include fontface('SourceSansSemiBold', 'SourceSansPro/SourceSansPro-SemiBold', bold);
+  @include fontface('SourceSansBold', 'SourceSansPro/SourceSansPro-Bold', bolder);
+  

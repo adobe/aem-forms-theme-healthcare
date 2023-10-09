@@ -1,0 +1,27 @@
+.cmp-adaptiveform-dropdown {
+  @include input;
+
+  &__widget {
+    @include widget;
+    width: 100%;
+    //color: $widget-focus-text-color;
+    background-image: url('./resources/images/dropdown.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  [dir='rtl'] &__widget {
+    background-position: left 10px center;
+  }
+}
+
+select::after {
+  content: '';
+  background: url(./resources/images/dropdown.svg) center center / cover no-repeat;
+}
+
+.cmp-adaptiveform-dropdown__widget[multiple='multiple'] {
+  height: 80px;
+}

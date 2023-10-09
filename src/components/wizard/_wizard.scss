@@ -1,0 +1,70 @@
+.cmp-adaptiveform-wizard {
+  position: relative;
+  margin: 72px 0;
+  margin-top: $space-s;
+
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+  &__label {
+    @include panel-label;
+  }
+
+  @include description;
+
+  &__widget {
+    position: relative;
+  }
+
+  &__tabList {
+    @include tab-list;
+  }
+
+  &__tab {
+    @include wizard-tab;
+  }
+
+  &__wizardpanel {
+    @include tab-container;
+  }
+
+  &__previousNav {
+    @include wizard-previous-button;
+    position: absolute;
+    inset-block-end: -72px;
+    inset-inline-end: 130px;
+    @media(max-width: 640px) {
+      width: 49%;
+      inset-inline-end: unset;
+      inset-inline-start: 0;
+    }
+  }
+
+  &__nextNav {
+    @include wizard-next-button;
+    position: absolute;
+    inset-inline-end: 0px;
+    @media(max-width: 640px) {
+      width: 49%;
+    }
+  }
+
+  &__containerNav {
+    display: flex;
+    justify-content: flex-end;
+    gap: $space-s;
+    width: 100%; 
+    position: absolute;
+    inset-block-end: -80px
+  }
+
+  &__nav {
+    &--previous {
+      @include wizard-previous-button;
+      
+    }
+    &--next {
+      @include wizard-next-button;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.cmp-image {
+  margin: $space-l 0;
+
+  &__image {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: inherit;
+    margin: 0;
+    padding: 0;
+  }
+}
