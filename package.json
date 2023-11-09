@@ -1,6 +1,6 @@
 {
     "name": "@aemforms/af-healthcare-theme",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "AEM Forms Healthcare theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
     "scripts": {
