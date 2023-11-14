@@ -4,13 +4,16 @@
     "description": "AEM Forms Healthcare theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
     "scripts": {
-        "build": "rimraf dist && parcel build src/theme.ts",
+        "build": "rimraf dist && mkdir dist && parcel build src/theme.ts --no-cache --dist-dir dist",
         "watch": "parcel watch src/theme.ts",
         "proxy": "aem-site-theme-builder live",
         "live": "npm-run-all -p watch proxy",
         "create-zip": "cd dist/ && zip ./theme.zip ./* -r",
+        "deploy-zip": "node scripts/deploy-zip.mjs",
         "clientlib-generator": "node clientlib-generator.js",
-        "create-clientlib": "npm run build && npm run clientlib-generator"
+        "create-clientlib": "npm run build && npm run clientlib-generator",
+        "stylelint": "stylelint src/*/*{.css,scss}",
+        "stylelint:fix": "stylelint --fix src/*/*{.css,scss}"
     },
     "devDependencies": {
         "@adobe/aem-site-theme-builder": "5.3.0",
@@ -26,7 +29,14 @@
         "parcel-namer-rewrite": "^2.0.0-rc.1",
         "postcss": "^8.3.11",
         "rimraf": "^3.0.2",
-        "typescript": "^4.5.2"
+        "typescript": "^4.5.2",
+        "stylelint-scss": "5.2.1",
+        "stylelint-csstree-validator": "3.0.0",
+        "stylelint": "^14.16.1",
+        "stylelint-config-standard": "^25.0.0",
+        "stylelint-config-standard-scss": "^4.0.0",
+        "stylelint-formatter-pretty": "^3.1.1",
+        "stylelint-use-logical-spec": "^5.0.0"
     },
     "publishConfig": {
         "access": "public"
