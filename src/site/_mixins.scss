@@ -412,6 +412,9 @@
 
 @mixin tab-container {
   margin: 0;
+  &--hidden {
+    display: none;
+  }
 }
 
 @mixin vertical-tab {
