@@ -18,7 +18,7 @@
 
   &__widgetlabel {
     @include secondary-button;
-    position: static;
+    display: flex;
     pointer-events: all;
     margin: $space-xs 0;
     //Added for look like button
@@ -52,6 +52,13 @@
     height: $tap-height;
     padding: 0 $space-s;
     border-bottom: $border-light;
+  }
+
+  &__fileendcontainer {
+    display: flex;
+    justify-content: space-between;
+    gap: $space-s;
+    align-items: center;
   }
 
   &__filename {
