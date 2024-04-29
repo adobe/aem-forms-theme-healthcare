@@ -275,7 +275,7 @@
 //ToDo We have added some default styles in button.scss, may be we can float them here.
 @mixin primary-button {
   @include basic-button;
-  background: $primary;
+  background-color: $primary;
   border: none;
   height: $tap-height;
   padding: 0 $space-m;

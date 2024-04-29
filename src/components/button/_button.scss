@@ -11,14 +11,14 @@
     &:hover {
       //background-color: $dark-primary;
       //define a variable for this color
-      background: #0000001F;
+      background-color: #0000001F;
 
     }
     &:active {
       background-color: #00000094;
     }
     &[disabled] {
-      background: #0000001F;
+      background-color: #0000001F;
       opacity: 60%;
     }
   }
@@ -43,9 +43,11 @@
   bottom: 0;
   z-index: 12;
   width: calc(100% + 40px);
+  & button:not(.cmp-adaptiveform-button__questionmark){
+    background-color: $primary;
+  }
   & button {
     margin-top: 0;
-    background-color: $primary;
     color: $white;
 
     &:not([disabled]):hover {
