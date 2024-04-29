@@ -66,6 +66,9 @@
   }
 
   &__filedelete {
+    float: right;
+    text-transform: uppercase;
+    color: $error;
     cursor: pointer;
   }
 
