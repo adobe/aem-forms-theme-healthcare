@@ -4,7 +4,8 @@
     "description": "Standard AEM Forms Healthcare theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
     "scripts": {
-        "build": "rimraf dist && mkdir dist && parcel build src/theme.ts --no-cache --dist-dir dist",
+        "build": "rimraf dist && mkdir dist && parcel build src/theme.ts --no-cache --dist-dir dist && npm run postcss",
+        "postcss": "node post-css.js",
         "watch": "parcel watch src/theme.ts",
         "proxy": "aem-site-theme-builder live",
         "live": "npm-run-all -p watch proxy",
@@ -28,6 +29,7 @@
         "parcel": "^2.0.1",
         "parcel-namer-rewrite": "^2.0.0-rc.1",
         "path": "^0.12.7",
+        "postcss-media-minmax": "^5.0.0",
         "process": "^0.11.10",
         "rimraf": "^3.0.2",
         "typescript": "^4.5.2",
