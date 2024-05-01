@@ -10,11 +10,11 @@
   }
   @include description;
 
-  &__tablist {
+  & &__tablist {
     @include tab-list;
   }
 
-  &__tab {
+  &__tablist &__tab {
     @include tab;
   }
 
