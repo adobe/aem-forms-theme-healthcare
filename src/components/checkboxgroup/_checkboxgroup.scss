@@ -48,11 +48,11 @@
     @include widget;
     height: 0px;
     width: 0px;
-    display: none;
     padding: 0;
     margin: 0;
     outline: none;
-    appearance: none;
+    position: absolute;
+    left: -9999px;
     -moz-appearance: none;
     -webkit-appearance: none;
 
