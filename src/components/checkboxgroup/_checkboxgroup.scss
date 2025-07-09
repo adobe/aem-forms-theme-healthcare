@@ -52,9 +52,6 @@
     margin: 0;
     outline: none;
     position: absolute;
-    left: -9999px;
-    -moz-appearance: none;
-    -webkit-appearance: none;
 
     &:checked {
       background-color: $light-primary;

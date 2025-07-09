@@ -57,8 +57,10 @@
     &__widget {
       height: 0;
       width: 0;
+      padding: 0;
+      margin: 0;
+      outline: none;
       position: absolute;
-      left: -9999px;
     }
 
     &__widget:checked{
