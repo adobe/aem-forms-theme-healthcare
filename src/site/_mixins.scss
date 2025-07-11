@@ -8,7 +8,7 @@
 
   &:not([disabled]):focus-within label {
     color: $widget-focus-text-color;
-    opacity: 100%;
+    opacity: 1;
   }
 
   &[data-cmp-valid=false]>&__shortdescription {
